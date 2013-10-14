@@ -1,0 +1,21 @@
+counter = 2
+
+candidate_prime = 5
+
+test_for_prime = 3
+
+while counter < 100:
+        
+        if candidate_prime % test_for_prime == 0:
+            print candidate_prime, "is divisible by", test_for_prime, " : Not prime."
+            candidate_prime += 2
+            test_for_prime =3
+        elif test_for_prime > candidate_prime/2:
+            counter += 1
+            print str(candidate_prime) #+ " is not divisible by any number other than itself and 1: PRIME!"
+            candidate_prime +=2
+            test_for_prime = 3
+        else:
+            test_for_prime +=2
+
+print "You've found the first " + str(counter) + " prime numbers."
